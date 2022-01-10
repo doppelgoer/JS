@@ -18,3 +18,4 @@ console.log(test);
 console.log(test1);
 console.log(test.databaseConnection);
 console.log(test1.databaseConnection);
+console.log(Singleton);
