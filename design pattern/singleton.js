@@ -37,15 +37,5 @@ function Singleton1() {
     },
   };
 }
-// this.test =
-// throw new Error("Use singleton.getInstance()");
-// (function getInstance() {
-//   if (!Singleton1.instance) {
-//     Singleton1.instance = new DatabaseConnection1();
-//   }
-
-//   return Singleton.instance;
-// })();
-
 // module.exports = Singleton1();
 module.exports = Singleton;
