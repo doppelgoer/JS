@@ -38,4 +38,4 @@ function Singleton1() {
   };
 }
 // module.exports = Singleton1();
-module.exports = Singleton;
+module.exports = { Singleton };

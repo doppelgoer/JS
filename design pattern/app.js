@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 let mysql = require("mysql");
-const Singleton = require("./singleton");
+const { Singleton } = require("./singleton");
 let connection = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
