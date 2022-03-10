@@ -1,3 +1,5 @@
+/////////////////////////////
+//singleton 패턴
 class DatabaseConnection {
   constructor() {
     this.databaseConnection = "dummytext";
@@ -20,22 +22,4 @@ class Singleton {
   }
 }
 
-function Singleton1() {
-  let instance;
-  function DatabaseConnection() {
-    // this.databaseConnection = "dummytext";
-    return {
-      databaseConnection: "dummytext",
-    };
-  }
-  return {
-    getInstance: function () {
-      if (!instance) {
-        instance = DatabaseConnection();
-      }
-      return instance;
-    },
-  };
-}
-// module.exports = Singleton1();
 module.exports = { Singleton };
