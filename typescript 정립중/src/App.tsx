@@ -9,14 +9,22 @@ function App() {
     try {
       data = await axios({
         method: 'GET',
-        url: 'http://localhost:80/test',
+        url: 'http://localhost:80/dbRouter/getTodayUser',
       });
       console.log(123);
     } catch {}
   }
   return (
     <div className='App'>
-      <button onClick={test}>fdsfds</button>
+      <button
+        onClick={test}
+        onKeyDown={function (e) {
+          if (e.key === 'Enter') {
+            test();
+          }
+        }}>
+        fdsfds
+      </button>
     </div>
   );
 }

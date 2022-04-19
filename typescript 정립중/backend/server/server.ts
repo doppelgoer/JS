@@ -6,6 +6,8 @@ import proxyRouter from './index';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import path from 'path';
+import '../DB/DBConnection';
+// console
 // const bodyParser = require("body-parser");
 // const cors = require("cors");
 // const path = require("path");
@@ -17,20 +19,18 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/proxyRouter', proxyRouter);
-
 const port = process.env.PORT || 80;
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 app.use(express.static(path.join(__dirname, '../build')));
-app.get('/', function (req, res) {
-  console.log(12312312312);
-  // res.send(express.static(path.join(__dirname, "../build/index.html")));
-  res.send('hi');
-});
-app.get('/test', function (req, res) {
-  console.log(12312312312);
-  console.log(555);
-  // res.send(express.static(path.join(__dirname, "../build/index.html")));
-  res.send('hi');
-});
+// app.get('/', function (req, res) {
+//   // res.send(express.static(path.join(__dirname, "../build/index.html")));
+//   res.send('hi');
+// });
+import router from '../router/index';
+app.use('/proxyRouter', proxyRouter);
+app.use('', router);
+
+// app.use()
+// import { test } from '../middleware/getData';
+// app.get('/test', test);
