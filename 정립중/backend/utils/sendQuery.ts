@@ -1,5 +1,5 @@
-import DB from '../DB/index';
-import Connection from 'mysql2/typings/mysql/lib/Connection';
+import DB from "../DB/index";
+import Connection from "mysql2/typings/mysql/lib/Connection";
 //데이터베이스 연결
 // function connectDB(): Connection | void {
 //   let connectDB = DB.isConnected.connection();
@@ -36,7 +36,7 @@ interface userData {
 // let test3 = 1;
 export async function getTodayUserData() {
   let getTodayUserRes = await sendQuery(querys.getTodayUserSql);
-  // console.log(getTodayUserRes);
+  console.log(5325235, getTodayUserRes);
   // console.log(typeof getTodayUserRes);
   // console.log(getTodayUserRes);
   // console.log(test3, test3, test3, test3, test3, test3, test3);
