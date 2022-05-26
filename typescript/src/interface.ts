@@ -98,14 +98,14 @@ class NineClass implements Nine {
   }
 }
 
-//class 타입의 확장
-class Ten1 {
-  constructor(public ten: number) {}
-}
-let ten1: Ten1 = new Ten1(1);
-console.log(ten1);
+// //class 타입의 확장
+// class Ten1 {
+//   constructor(public ten: number) {}
+// }
+// let ten1: Ten1 = new Ten1(1);
+// console.log(ten1);
 
-interface Ten2 extends Ten1 {
-  nine: string;
-}
-let ten2: Ten2 = { ten: 1, nine: "nine" };
+// interface Ten2 extends Ten1 {
+//   nine: string;
+// }
+// let ten2: Ten2 = { ten: 1, nine: "nine" };

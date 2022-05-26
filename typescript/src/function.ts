@@ -18,4 +18,39 @@ const square: Round = function (x, y) {
   return x + y;
 };
 let square1 = square(1, 2);
-console.log("square1의 둘레 : ", square1);
+
+//선택적 매개변수(property) 와 선택적 매개변수
+function one(x: number, y?: number): number {
+  if (y) return x + y;
+  else return x;
+}
+let one1: number = one(1, 2); //3
+let one2: number = one(1); //1
+
+//초기화 매개변수
+function two(x: number, y: number = 1) {
+  return x + y;
+}
+let two1: number = two(1, 2); //3
+let two2: number = two(1, undefined); //2
+
+function three(x: number, y: number, ...z: number[]): number {
+  let sumOfZ: number = 0;
+  for (let i = 0; i < z.length; i++) {
+    sumOfZ = sumOfZ + z[i];
+  }
+  return x + y + sumOfZ;
+}
+let three1: number = three(1, 1); //2;
+// console.log(three1);
+let three2: number = three(1, 1, 1); //2;
+// console.log(three2);
+let three3: number = three(1, 1, 1, 1); //2;
+// console.log(three3);
+
+// function four(this: void) {
+//   console.log(this);
+// }
+
+// let four1 = four(this);
+// }
