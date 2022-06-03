@@ -5,6 +5,7 @@ interface Student {
   finalScore: number;
 }
 
+//왜 안되지?
 function studentData(_name: string, _isMale: boolean, _middleScore: number, _finalScore: number): Student {
   return {
     name: _name,
