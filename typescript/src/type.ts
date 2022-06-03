@@ -10,7 +10,7 @@ let isFalse: boolean = false;
 let num: number = 1;
 
 //String
-let word: string = 'Hello TypeScript!';
+let word: string = "Hello TypeScript!";
 let sentence: string = `${word} Im JoY.`;
 
 //Array
@@ -24,7 +24,7 @@ let arr: number[] = [1, 2, 3];
 let arrGeneric: Array<number> = [1, 2, 3];
 
 //Tuple
-let arrTuple: [number, string] = [1, '1'];
+let arrTuple: [number, string] = [1, "1"];
 
 //enum은 아직 잘 모르겠음.
 enum Test1 {
@@ -34,17 +34,17 @@ enum Test1 {
 }
 let testOne: Test1 = Test1.One;
 let testTwo: string = Test1[6];
-console.log(testOne);
-console.log(testTwo);
+// console.log(testOne);
+// console.log(testTwo);
 
 //Any
 //타입자체를 모를 때.
-let anyString: any = '안녕';
+let anyString: any = "안녕";
 let anyNumber: any = 123;
 let anyBollean: any = true;
-let anyArr: any = [1, 2, 'test', anyBollean];
+let anyArr: any = [1, 2, "test", anyBollean];
 //타입의 일부를 알 때
-let anyArr1: any[] = [1, 2, 'test', anyBollean];
+let anyArr1: any[] = [1, 2, "test", anyBollean];
 
 //Null && Undefined
 let n: null = null;
@@ -52,7 +52,7 @@ let u: undefined = undefined;
 
 //Void
 function noReturn(): void {
-  console.log('No Return');
+  // console.log("No Return");
 }
 let unusable: void = undefined;
 // unusable = null; // 성공  `--strictNullChecks` 을 사용하지 않을때만
@@ -63,25 +63,51 @@ function errorNever(message: string): never {
 }
 
 //타입 단언 (Type assertions)
-let someValue: any = 'this is a string';
+let someValue: any = "this is a string";
 let strLength: number = (<string>someValue).length;
 
-let someValue1: any = 'this is a string';
+let someValue1: any = "this is a string";
 let strLength1: number = (someValue1 as string).length;
 
 //Object
 //object는 원시 타입이 아닌 타입을 나타냅니다.
 //예를 들어, number, string, boolean, bigint, symbol, null,
 //또는 undefined 가 아닌 나머지를 의미합니다.
-declare function create(o: object | null): void;
+// declare function create(o: object | null): void;
 
-function test() {
-  console.log(123);
-}
-create({ prop: 0 }); // 성공
-create(null); // 성공
+// create({ prop: 0 }); // 성공
+// create(null); // 성공
 
-create(42); // 오류
-create('string'); // 오류
-create(false); // 오류
-create(undefined); // 오류
+// create(42); // 오류
+// create('string'); // 오류
+// create(false); // 오류
+// create(undefined); // 오류
+
+type Person = {
+  name: string;
+  age: number;
+  sex: string;
+  weight: number;
+  height: number;
+};
+let joy: Person = {
+  name: "joy",
+  age: 29,
+  sex: "Male",
+  weight: 69,
+  height: 174,
+};
+type Abcd = "A" | "C" | "C" | "D";
+type Student = Person & {
+  score: Abcd;
+};
+
+let jay: Student = {
+  name: "joy",
+  age: 29,
+  sex: "Male",
+  weight: 69,
+  height: 174,
+  score: "A",
+};
+console.log(jay);
