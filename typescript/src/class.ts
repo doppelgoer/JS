@@ -38,3 +38,9 @@ let one: Test = new Test(1, "흠", "음?", "네번째");
 // let one.one = 2
 one.four = "eshdl";
 console.log(one);
+
+class GenericClass<T, U> {
+  constructor(public numberData: T, public StringData: U) {}
+}
+const GenericInstance = new GenericClass<number, string>(1, "one");
+console.log(GenericInstance);
