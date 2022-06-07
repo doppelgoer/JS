@@ -90,7 +90,7 @@ type Person = {
   weight: number;
   height: number;
 };
-let joy: Person = {
+let joy1: Person = {
   name: "joy",
   age: 29,
   sex: "Male",
@@ -98,11 +98,11 @@ let joy: Person = {
   height: 174,
 };
 type Abcd = "A" | "C" | "C" | "D";
-type Student = Person & {
+type Student1 = Person & {
   score: Abcd;
 };
 
-let jay: Student = {
+let jay: Student1 = {
   name: "joy",
   age: 29,
   sex: "Male",
@@ -111,3 +111,9 @@ let jay: Student = {
   score: "A",
 };
 console.log(jay);
+
+type GenericType<T> = T;
+let generic1: GenericType<number> = 1;
+let generic2: GenericType<string> = "1";
+let generic3: GenericType<boolean> = true;
+let generic4: GenericType<number[]> = [1];

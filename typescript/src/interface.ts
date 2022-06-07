@@ -109,3 +109,8 @@ class NineClass implements Nine {
 //   nine: string;
 // }
 // let ten2: Ten2 = { ten: 1, nine: "nine" };
+
+interface Ten<T> {
+  arr: T[];
+}
+let genericArr: Ten<number> = { arr: [1, 2, 3] };
