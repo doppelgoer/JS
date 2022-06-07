@@ -8,7 +8,7 @@ interface Two {
   one: number;
   two?: string;
 }
-let two1: Two = { one: 1, two: "2" };
+let two1: Two = { one: 1, two: '2' };
 let two2: Two = { one: 1 };
 
 //읽기전용 프로퍼티
@@ -17,7 +17,7 @@ interface Three {
   two?: string;
   readonly three: boolean;
 }
-let three: Three = { one: 1, two: "two", three: true };
+let three: Three = { one: 1, two: 'two', three: true };
 three.one = 2;
 three.three = false; //오류
 
@@ -27,31 +27,31 @@ interface Four {
   four: string;
   [key: number]: string;
 }
-let four1: Four = { three: false, four: "four", 1: "one" };
-let four2: Four = { three: false, four: "four", 2: "two" };
+let four1: Four = { three: false, four: 'four', 1: 'one' };
+let four2: Four = { three: false, four: 'four', 2: 'two' };
 
 interface StudentHeight {
   name: string;
   [grade: number]: number;
 }
-let joy = { name: "JoY", 1: 130, 2: 143, 3: 157 };
+let joy = { name: 'JoY', 1: 130, 2: 143, 3: 157 };
 
 //리터럴 타입
-type FiveType = "Five" | "five" | "FiVe" | "fivE" | 5;
+type FiveType = 'Five' | 'five' | 'FiVe' | 'fivE' | 5;
 interface Five {
   // five: string;
   [grade: number]: number;
   five: FiveType;
 }
-let five1 = { 1: 1, five: "Five" };
+let five1 = { 1: 1, five: 'Five' };
 let five2 = { 1: 1, five: 5 };
 
-type Score = "A" | "B" | "C" | "D";
+type Score = 'A' | 'B' | 'C' | 'D';
 interface StudentScore {
   name: Score;
   [grade: string]: Score;
 }
-let joy = { name: "JoY", 1: "A", 2: "D", 3: "B" };
+let joy = { name: 'JoY', 1: 'A', 2: 'D', 3: 'B' };
 
 //함수 타입
 interface Six {
@@ -69,7 +69,7 @@ let sevenArr1: Seven1 = [1, 2, 3, 4];
 interface Seven2 {
   [key: number]: string;
 }
-let sevenArr2: Seven2 = ["1", "2", "3", "4"];
+let sevenArr2: Seven2 = ['1', '2', '3', '4'];
 interface Seven3 {
   [key: string]: number;
 }
@@ -82,7 +82,7 @@ interface Eight {
 interface Eight2 extends Eight {
   eight2: number;
 }
-let eight1: Eight2 = { eight: "eight", eight2: 8 };
+let eight1: Eight2 = { eight: 'eight', eight2: 8 };
 
 //클래스 타입
 interface Nine {
