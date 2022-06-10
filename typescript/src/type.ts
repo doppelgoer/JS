@@ -95,7 +95,7 @@ let joy: Person = {
   age: 29,
   sex: 'Male',
   weight: 69,
-  height: 1741,
+  height: 174,
 };
 type Abcd = 'A' | 'C' | 'C' | 'D';
 type Student = Person & {
