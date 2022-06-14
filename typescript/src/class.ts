@@ -8,7 +8,7 @@ class Car {
   }
 }
 class Bmw extends Car {
-  constructor(name: string, public 기종: string) {
+  constructor(name: string, public 기종: string, private price: number) {
     super(name);
   }
   public superGo() {
@@ -16,7 +16,7 @@ class Bmw extends Car {
   }
 }
 
-let car1 = new Bmw("준영이거", "기종이라");
+let car1 = new Bmw("준영이거", "기종이라", 300000);
 car1.go();
 console.log(car1);
 car1.superGo();
