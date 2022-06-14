@@ -4,7 +4,7 @@ class Car {
     console.log("부릉부릉");
   }
   public stop() {
-    console.log("끼이익");
+    console.log("끼이익!!!");
   }
 }
 class Bmw extends Car {
