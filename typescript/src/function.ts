@@ -54,3 +54,23 @@ let three3: number = three(1, 1, 1, 1); //2;
 
 // let four1 = four(this);
 // }
+
+//param의 타입이 number 일 때는 콘솔에 찍고, 나머지
+//경우는 param 을 return 한다
+function genericFn<T>(param: T): T | void {
+  if (typeof param === "number") {
+    console.log(param);
+  } else {
+    return param;
+  }
+}
+genericFn(1); //console.log(1)
+genericFn("text"); //return 'text'
+genericFn(true); //return true
+
+function anyFn(param: any): any {
+  return param;
+}
+function anyFn1(param: any): any {
+  return param;
+}
