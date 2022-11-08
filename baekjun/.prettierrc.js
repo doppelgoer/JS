@@ -1,0 +1,21 @@
+{
+  "editor.fontSize": 28,
+  "editor.tabSize": 2,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.semi": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.jsxBracketSameLine": true,
+  "prettier.printWidth": 160,
+  "prettier.singleQuote": true,
+  "editor.wordWrapColumn": 200,
+  "diffEditor.wordWrap": "on",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "window.zoomLevel": -1,
+  "editor.formatOnSave": true
+}
