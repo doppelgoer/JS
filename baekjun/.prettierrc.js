@@ -1,8 +1,8 @@
-{
+module.exports = {
   "editor.fontSize": 28,
   "editor.tabSize": 2,
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "prettier.semi": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -17,5 +17,5 @@
   "diffEditor.wordWrap": "on",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "window.zoomLevel": -1,
-  "editor.formatOnSave": true
-}
+  "editor.formatOnSave": true,
+};
