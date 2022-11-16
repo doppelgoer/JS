@@ -114,3 +114,19 @@ interface Ten<T> {
   arr: T[];
 }
 let genericArr: Ten<number> = { arr: [1, 2, 3] };
+
+//인터페이스 다중 확장
+interface DupleName {
+  name: string;
+}
+interface DupleAge {
+  age: number;
+}
+interface DupleHeight extends DupleName, DupleAge {
+  height: number;
+}
+let imJoY: DupleHeight = {
+  name: 'JoY',
+  age: 29,
+  height: 176,
+};

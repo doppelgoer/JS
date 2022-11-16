@@ -10,7 +10,7 @@ let isFalse: boolean = false;
 let num: number = 1;
 
 //String
-let word: string = "Hello TypeScript!";
+let word: string = 'Hello TypeScript!';
 let sentence: string = `${word} Im JoY.`;
 
 //Array
@@ -22,9 +22,15 @@ let arr: number[] = [1, 2, 3];
  * @arrGeneric 제네릭 배열선언
  */
 let arrGeneric: Array<number> = [1, 2, 3];
-
+type pairArray = [any, any][];
+let test111: pairArray = [
+  [123, 5235],
+  [123, 5235],
+  [123, 5235],
+  [123, 5235],
+];
 //Tuple
-let arrTuple: [number, string] = [1, "1"];
+let arrTuple: [number, string] = [1, '1'];
 
 //enum은 아직 잘 모르겠음.
 enum Test1 {
@@ -39,12 +45,12 @@ let testTwo: string = Test1[6];
 
 //Any
 //타입자체를 모를 때.
-let anyString: any = "안녕";
+let anyString: any = '안녕';
 let anyNumber: any = 123;
 let anyBollean: any = true;
-let anyArr: any = [1, 2, "test", anyBollean];
+let anyArr: any = [1, 2, 'test', anyBollean];
 //타입의 일부를 알 때
-let anyArr1: any[] = [1, 2, "test", anyBollean];
+let anyArr1: any[] = [1, 2, 'test', anyBollean];
 
 //Null && Undefined
 let n: null = null;
@@ -63,10 +69,10 @@ function errorNever(message: string): never {
 }
 
 //타입 단언 (Type assertions)
-let someValue: any = "this is a string";
+let someValue: any = 'this is a string';
 let strLength: number = (<string>someValue).length;
 
-let someValue1: any = "this is a string";
+let someValue1: any = 'this is a string';
 let strLength1: number = (someValue1 as string).length;
 
 //Object
@@ -91,29 +97,29 @@ type Person = {
   height: number;
 };
 let joy1: Person = {
-  name: "joy",
+  name: 'joy',
   age: 29,
-  sex: "Male",
+  sex: 'Male',
   weight: 69,
   height: 174,
 };
-type Abcd = "A" | "C" | "C" | "D";
+type Abcd = 'A' | 'C' | 'C' | 'D';
 type Student1 = Person & {
   score: Abcd;
 };
 
 let jay: Student1 = {
-  name: "joy",
+  name: 'joy',
   age: 29,
-  sex: "Male",
+  sex: 'Male',
   weight: 69,
   height: 174,
-  score: "A",
+  score: 'A',
 };
 console.log(jay);
 
 type GenericType<T> = T;
 let generic1: GenericType<number> = 1;
-let generic2: GenericType<string> = "1";
+let generic2: GenericType<string> = '1';
 let generic3: GenericType<boolean> = true;
 let generic4: GenericType<number[]> = [1];
