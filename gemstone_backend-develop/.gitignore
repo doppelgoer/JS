@@ -1,0 +1,21 @@
+.DS_Store
+node_modules
+
+# IDE settings
+.idea/workspace.xml
+.idea/shelf
+.idea/.gitignore
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+npm-debug.log*
+
+# Custom files
+data
+dist
+/test*.ts

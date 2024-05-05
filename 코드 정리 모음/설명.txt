@@ -1,0 +1,5 @@
+connection.ts 싱글톤 및 node.js DB연결 class
+
+setupProxy.ts -> node.js proxy 세팅
+
+nodemailer.js -> node.js 이메일 인증
