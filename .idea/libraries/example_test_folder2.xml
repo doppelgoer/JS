@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="example-test-folder2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sails/node_modules/sails-generate/lib/core-generators/new/example-test-folder.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
